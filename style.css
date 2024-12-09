@@ -1,0 +1,40 @@
+/* Estilando a experiência */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.passo {
+  display: none;
+  padding: 20px;
+  background-color: rgb(51, 45, 45);
+  border-radius: 10px;
+}
+
+.passo.ativo {
+  display: block;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}

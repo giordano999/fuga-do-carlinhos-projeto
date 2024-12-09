@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuga de Carlinhos - O Cereal Killer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Áudio de fundo -->
+<audio id="som-fundo" loop autoplay>
+    <source src="audio/fundo.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Áudio de perda -->
+<audio id="som-perda">
+    <source src="audio/perda.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Áudio de vitória -->
+<audio id="som-vitoria">
+    <source src="audio/vitoria.mp3" type="audio/mpeg">
+</audio>
+
+<main>
+    <!-- Passo 0 - Introdução -->
+    <div class="passo ativo" id="passo-0">
+        <h1>Você está preso em uma casa com um assassino conhecido como Carlinhos, o Cereal Killer!</h1>
+        <p>Você ouve passos no corredor. O que você vai fazer?</p>
+        <button class="btn-proximo" data-proximo="1">Correr pela porta da frente</button>
+        <button class="btn-proximo" data-proximo="2">Tentar se esconder no armário</button>
+    </div>
+
+    <!-- Passo 1 - Corredor -->
+    <div class="passo" id="passo-1">
+        <p>Você corre pelo corredor e encontra duas opções: ir até a saída ou explorar um dos quartos ao lado.</p>
+        <button class="btn-proximo" data-proximo="3">Correr para a saída</button>
+        <button class="btn-proximo" data-proximo="4">Explorar o quarto ao lado</button>
+    </div>
+
+    <!-- Passo 2 - Armário -->
+    <div class="passo" id="passo-2">
+        <p>Você se esconde no armário, mas percebe que Carlinhos está perto! Ele está abrindo a porta...</p>
+        <button class="btn-proximo" data-proximo="3">Tentar escapar pela porta</button>
+    </div>
+
+    <!-- Passo 3 - Derrota -->
+    <div class="passo" id="passo-3">
+        <h1>Você foi capturado por Carlinhos!</h1>
+        <p>O Carlinhos soltou seu "líquido amoroso" em você. Você perdeu!</p>
+        <button class="btn-proximo" data-proximo="0">Recomeçar a aventura</button>
+    </div>
+
+    <!-- Passo 4 - Explorando o quarto -->
+    <div class="passo" id="passo-4">
+        <p>Você explora o quarto e encontra uma janela aberta. Parece que você pode escapar por ali.</p>
+        <button class="btn-proximo" data-proximo="5">Escapar pela janela</button>
+        <button class="btn-proximo" data-proximo="3">Voltar ao corredor</button>
+    </div>
+
+    <!-- Passo 5 - Vitória -->
+    <div class="passo" id="passo-5">
+        <h1>Você escapou pela janela e se livrou de Carlinhos!</h1>
+        <p>Parabéns! Você sobreviveu e fugiu com sucesso da casa!</p>
+        <button class="btn-proximo" data-proximo="0">Recomeçar a aventura</button>
+    </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
